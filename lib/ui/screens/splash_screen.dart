@@ -25,6 +25,9 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Lottie.asset("assets/netflix.json"));
+    return Scaffold(
+      backgroundColor: Colors.black, // Netflix tarzı
+      body: Center(child: Lottie.asset("assets/netflix.json")),
+    );
   }
 }

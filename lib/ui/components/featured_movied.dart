@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 
 class FeatureMovieCard extends StatelessWidget {
   final ImageProvider image;
-   FeatureMovieCard({
-    Key? key,
-    required this.image,
-  }) : super(key: key);
+  FeatureMovieCard({Key? key, required this.image}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +10,7 @@ class FeatureMovieCard extends StatelessWidget {
 
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * .7,
+      height: MediaQuery.of(context).size.height * .5,
       child: Stack(
         children: [
           Container(

@@ -11,25 +11,41 @@ class WatchMovieCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white12,
-        borderRadius: BorderRadius.circular(8),),
-        clipBehavior: Clip.antiAlias,
+        borderRadius: BorderRadius.circular(8),
+      ),
+      clipBehavior: Clip.antiAlias,
       child: Column(
         children: [
-          Container(
-            width: 110,
-            height: 180,
-            
-          
-            child: Image(image: image, fit: BoxFit.cover),
+          Stack(
+            children: [
+              Container(
+                width: 110,
+                height: 180,
+
+                child: Expanded(child: Image(image: image, fit: BoxFit.cover)),
+              ),
+              Icon(Icons.play_circle_fill_outlined,size: 64,)
+            ],
           ),
-          SizedBox(
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 10),
             width: 110,
             height: 40,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [Icon(Icons.info_outline), Icon(Icons.more_vert)],
+              children: [
+                Icon(Icons.info_outline), Icon(Icons.more_vert),
+              ],
             ),
           ),
+          // SizedBox(
+          //   width: 110,
+          //   height: 40,
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //     children: [Icon(Icons.info_outline), Icon(Icons.more_vert)],
+          //   ),
+          // ),
         ],
       ),
     );
